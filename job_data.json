@@ -1,0 +1,20 @@
+[
+  {
+    "role": "Frontend Developer",
+    "company": "TechNova",
+    "description": "Build and optimize UI/UX using HTML, CSS, JavaScript, React.",
+    "skills": ["html", "css", "javascript", "react"]
+  },
+  {
+    "role": "Backend Developer",
+    "company": "CodeCrafters",
+    "description": "Work on server-side logic using Python and Flask.",
+    "skills": ["python", "flask", "sql"]
+  },
+  {
+    "role": "Data Scientist",
+    "company": "DataVerse",
+    "description": "Analyze and visualize data using Python, Pandas, and ML tools.",
+    "skills": ["python", "pandas", "machine learning", "numpy"]
+  }
+]

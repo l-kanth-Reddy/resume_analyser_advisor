@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Recommendations</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f3;
+            padding: 30px;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        .skills-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .job-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .job-card h3 {
+            margin: 0;
+            color: #2980b9;
+        }
+
+        .company {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .match {
+            margin-top: 10px;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            padding: 8px 15px;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .back-btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Job Recommendations</h1>
+
+    <div class="skills-box">
+        <h2>Your Extracted Skills</h2>
+        <p>{{ skills }}</p>
+    </div>
+
+    <h2>Matching Jobs</h2>
+
+    {% if jobs %}
+        {% for job in jobs %}
+            <div class="job-card">
+                <h3>{{ job.role }}</h3>
+                <p class="company">{{ job.company }}</p>
+                <p>{{ job.description }}</p>
+                <p class="match">Match: {{ job.match_percent }}%</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No suitable jobs found.</p>
+    {% endif %}
+
+    <a href="/" class="back-btn">Upload Another Resume</a>
+
+</body>
+</html>
